@@ -1,0 +1,12 @@
+<!-- views/comedians/index.erb -->
+<html>
+  <head></head>
+  <body>
+    <% @comedians.each do |comedian| %>
+      <ul>
+        <li><%= comedian.name %></li>
+        <li><%= comedian.age %></li>
+      </ul>
+    <% end %>
+  </body>
+</html>
