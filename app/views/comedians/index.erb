@@ -6,6 +6,9 @@
       <ul>
         <li><%= comedian.name %></li>
         <li><%= comedian.age %></li>
+        <% comedian.specials.each do |special| %>
+          <li><%= special.name %></li>
+        <% end %>
       </ul>
     <% end %>
   </body>
