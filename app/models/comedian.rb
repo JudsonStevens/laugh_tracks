@@ -5,4 +5,8 @@ class Comedian < ActiveRecord::Base
   def self.average_age
     Comedian.average(:age)
   end
+
+  def self.find_comedians_by_age(comedian_age)
+    Comedian.where(age: comedian_age)
+  end
 end

@@ -7,4 +7,10 @@ class LaughTracksApp < Sinatra::Base
     erb :"comedians/index"
   end
 
+  get '/comedians/:age' do
+    @comedians = Comedian.find_comedians_by_age(params[:age])
+
+    erb :"comedians/individual_comedian"
+  end
+
 end

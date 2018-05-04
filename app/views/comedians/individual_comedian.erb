@@ -1,0 +1,15 @@
+<!-- views/comedians/individual_comedian.erb -->
+<html>
+  <head></head>
+  <body>
+    <% @comedians.each do |comedian| %>
+      <ul>
+        <li><%= comedian.name %></li>
+        <li><%= comedian.age %></li>
+        <% comedian.specials.each do |special| %>
+          <li><%= special.name %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </body>
+</html>
