@@ -9,6 +9,12 @@ RSpec.describe 'Visitor' do
     Special.create(name: 'More Special', comedian_id: 2)
     Special.create(name: 'Most Special', comedian_id: 2)
 
+    visit('/comedians')
 
+    special_count = 3
+    second_special_count = 2
+
+    expect(page).to have_content(special_count)
+    expect(page).to have_content(second_special_count)
   end
 end
